@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Nike</title>
+  </head>
+  <body>
+    <section class="main">
+      <header>
+        <a href="#" class="logo"
+          ><img src="images/nike-logo-512.png" height="50" width="100" alt=""
+        /></a>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Quem Somos ?</a></li>
+        </ul>
+        <a href="#" class="app"
+          ><ion-icon name="arrow-down"></ion-icon>Dowload</a
+        >
+      </header>
+
+      <div class="contentBx">
+        <div class="text">
+          <h2>Nike</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+            possimus accusantium qui provident a deserunt obcaecati similique id
+            quibusdam tempore nam placeat asperiores aperiam non, architecto, et
+            aspernatur ea quisquam!
+          </p>
+          <h4>Dowload do app</h4>
+          <a href="#" class="btn"
+            ><ion-icon name="logo-apple"></ion-icon>Apple Store</a
+          >
+          <a href="#" class="btn"
+            ><ion-icon name="appstore"></ion-icon>Play Store</a
+          >
+        </div>
+
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+
+        <div class="imgBx">
+          <img src="images/14122020204438881.png" class="slides active" />
+          <img
+            src="images/tenis-nike-air-force-1-07-masculino-315122-111-1.webp"
+            class="slides"
+          />
+          <img
+            src="images/NBA-x-Nike-Air-Force-1-LV8-GS-Black-Wolf-Grey_w900.png"
+            class="slides"
+          />
+        </div>
+      </div>
+
+      <ul class="sci">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+      </ul>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ioncons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <script>
+      const slides = document.querySelectorAll('.slides')
+      const dots = document.querySelectorAll('.dot')
+
+      function SetActive(i) {
+        for (slide of slides) slide.classList.remove('active')
+        slides[i].classList.add('active')
+
+        for (dot of dots) dot.classList.remove('active')
+        dots[i].classList.add('active')
+      }
+
+      for (let j = 0; j < dots.length; j++) {
+        dots[j].addEventListener('click', function () {
+          SetActive(j)
+        })
+      }
+    </script>
+  </body>
+</html>
+
+<!-- https://youtu.be/ciP_rYTM2Uc?t=1193 -->

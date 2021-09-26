@@ -1,0 +1,247 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.main {
+  position: relative;
+  background: linear-gradient(
+    120deg,
+    #fff,
+    #fff 62%,
+    #191919 62%,
+    #191919 100%
+  );
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .logo img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #191919;
+  font-weight: 500;
+}
+
+/*  trasintion color / Home, Produtos e Quem Somos*/
+
+header ul li a:hover,
+header ul li a:active {
+  color: orangered;
+}
+/* ========================================= */
+
+.app {
+  position: absolute;
+  right: 100px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #191919;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-sizing: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app:hover {
+  background: orangered;
+  color: #fff;
+}
+
+.app ion-icon {
+  margin-right: 10px;
+  font-size: 1.4rem;
+}
+
+.contentBx {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contentBx .text {
+  max-width: 800px;
+}
+
+.contentBx .text h2 {
+  font-size: 6em;
+  color: #191919;
+}
+
+.contentBx .text p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8rem;
+}
+
+.contentBx .text h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.btn {
+  background: #252525;
+  color: #fff;
+  display: inline-flex;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1.1em;
+  margin: 5px 20px 5px 0;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: orangered;
+}
+
+.btn ion-icon {
+  margin-right: 10px;
+  font-size: 1.4em;
+}
+
+.imgBx img {
+  margin-left: 50px;
+  margin-right: 100px;
+  max-width: 300px;
+  display: none;
+}
+
+.imgBx img.active {
+  display: block;
+}
+
+.dots {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dots .dot {
+  position: relative;
+  width: 10px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.dots .dot.active {
+  background: #fff;
+}
+
+.sci {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+  margin: 20px;
+}
+
+.sci li a {
+  font-size: 1.8em;
+  color: #191919;
+}
+
+.sci li a:hover {
+  color: orangered;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 30px;
+  }
+
+  .main {
+    padding: 30px;
+    background: #fff;
+    justify-content: space-between;
+  }
+  .app {
+    display: none;
+  }
+  .contentBx {
+    flex-direction: column-reverse;
+    margin: 100px 0;
+  }
+
+  .imgBx img {
+    margin: 0;
+  }
+
+  .dots {
+    position: relative;
+    top: initial;
+    transform: none;
+    right: initial;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  .dots .dot {
+    width: 25px;
+    height: 10px;
+    background: #191919;
+    opacity: 0.2;
+  }
+
+  .dots .dot.active {
+    background: #191919;
+    opacity: 1;
+  }
+
+  .contentBx .text {
+    text-align: center;
+  }
+
+  .contentBx .text h2 {
+    font-size: 3rem;
+  }
+
+  .sci {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
